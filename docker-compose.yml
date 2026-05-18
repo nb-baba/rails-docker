@@ -12,7 +12,7 @@ services:
   web:
     build:
       context: .
-    command: bash -c "bundle exec rails db:create db:migrate && rails server -b 0.0.0.0"
+    command: bash -c "bundle exec rails db:prepare db:migrate && rails server -b 0.0.0.0"
     volumes:
       - .:/app
     ports:
