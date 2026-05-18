@@ -1,24 +1,25 @@
-# README
+# rails-docker Tutorial
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 必要環境
 
-Things you may want to cover:
+- Docker
+- Docker Compose
 
-* Ruby version
+## セットアップ・起動方法
 
-* System dependencies
+### 1.リポジトリをクローン
 
-* Configuration
+git clone https://github.com/nb-baba/rails-docker.git
+cd rails-docker
 
-* Database creation
+### 2.コンテナを起動
 
-* Database initialization
+docker-compose up
 
-* How to run the test suite
+### 3.ブラウザで確認
 
-* Services (job queues, cache servers, search engines, etc.)
+http://localhost:3000
 
-* Deployment instructions
+## テストの実行
 
-* ...
+docker-compose run web bundle exec rails test
